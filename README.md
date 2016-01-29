@@ -149,6 +149,9 @@ http://www.materialdoc.com/search-filter/
 
         <!-- Change background for the suggestions list view -->
         <item name="searchSuggestionBackground">@android:color/white</item>
+        
+        <!-- Change text size for edit text -->
+        <item name="android:textSize">@dimen/text_size_in_sp</item>
 
         <!-- Change text color for edit text. This will also be the color of the cursor -->
         <item name="android:textColor">@color/theme_primary_text_inverted</item>

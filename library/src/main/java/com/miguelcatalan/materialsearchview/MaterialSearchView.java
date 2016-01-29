@@ -17,6 +17,7 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -101,6 +102,10 @@ public class MaterialSearchView extends FrameLayout implements Filter.FilterList
         if (a != null) {
             if (a.hasValue(R.styleable.MaterialSearchView_searchBackground)) {
                 setBackground(a.getDrawable(R.styleable.MaterialSearchView_searchBackground));
+            }
+
+            if (a.hasValue(R.styleable.MaterialSearchView_android_textSize)) {
+                setTextSize(a.getDimensionPixelSize(R.styleable.MaterialSearchView_android_textSize, 0));
             }
 
             if (a.hasValue(R.styleable.MaterialSearchView_android_textColor)) {
@@ -305,6 +310,10 @@ public class MaterialSearchView extends FrameLayout implements Filter.FilterList
     @Override
     public void setBackgroundColor(int color) {
         mSearchTopBar.setBackgroundColor(color);
+    }
+
+    public void setTextSize(int size) {
+        mSearchSrcTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, size);
     }
 
     public void setTextColor(int color) {
